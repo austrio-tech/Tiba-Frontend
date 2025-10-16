@@ -1,0 +1,17 @@
+.overview {
+  padding: 4rem 2rem;
+  background-color: var(--background-color-alt-one);
+  color: #333;
+}
+
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color-highlight);
+}
+
+.overview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

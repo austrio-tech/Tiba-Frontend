@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/imgs/projects/3.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.h1 {
+  position: relative;
+  padding-top: 40vh;
+  color: #0072bb;
+  z-index: 2;
+  text-shadow: 0 0 3px white;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px black;
+  text-align: center;
+  /* padding-top: 40vh; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+  z-index: 1; /* Must be below the text and navbar */
+  transition: mask-image 0.1s ease, -webkit-mask-image 0.1s ease;
+}

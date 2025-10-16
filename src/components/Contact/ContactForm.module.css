@@ -1,0 +1,72 @@
+.form {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--background-color-alt-one);
+
+  padding: 4rem 0;
+  /* padding: 0.8rem 1.2rem; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  font-family: sans-serif;
+}
+
+.form h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color-highlight);
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: calc(100vw - 1.2rem * 8); /* we need to subtract twice the padding because it is applied to both sides */
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  color: var(--primary-color);
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aeaeae;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 4rem;
+}
+
+button {
+  width: calc(100vw - 1.2rem * 8);
+  padding: 0.8rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
