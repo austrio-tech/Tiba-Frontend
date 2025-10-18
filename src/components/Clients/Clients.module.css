@@ -2,20 +2,90 @@
   padding: 4rem 2rem;
   background-color: var(--background-color-alt-two);
   text-align: center;
+  overflow: hidden;
+  color: #888;
+  font-style: italic;
 }
 
 .clients h2 {
+  font-style: normal;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color-highlight);
 }
 
-.clients ul {
-  list-style: none;
-  padding: 0;
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
-.clients li {
-  margin: 8px 0;
+/* Marquee Container */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+/* Track - duplicated logos for seamless loop */
+.track {
+  display: flex;
+  width: fit-content;
+}
+
+.logo {
+  height: 60px;
+  margin: 0 2rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.15);
+}
+
+/* Left to Right Animation */
+.leftToRight {
+  animation: moveLeftToRight 20s linear infinite;
+}
+
+/* Right to Left Animation */
+.rightToLeft {
+  animation: moveRightToLeft 20s linear infinite;
+}
+
+/* Keyframes */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+    margin: 0 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
 }

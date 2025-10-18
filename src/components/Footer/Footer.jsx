@@ -13,10 +13,12 @@ const Footer = () => {
           <p className={styles.cnameText}>TIBA Engineering & Contracting LLC</p>
         </div>
         <p>
-          <strong>Email:</strong> mail@tibaoman.com
+          <strong>Managing Director:</strong> +968 9919 2454 <br />
+          <strong>Operations Manager:</strong> +968 9800 7420 <br />
+          <strong>Project Manager:</strong> +968 7840 9311
         </p>
         <p>
-          <strong>Phone:</strong> +968 99192454
+          <strong>Email:</strong> mail@tibaoman.com
         </p>
         <p>
           <strong>Fax:</strong> +968 24489096

@@ -1,22 +1,61 @@
 .projects {
-  padding: 4rem 2rem;
+  padding: 2rem;
   background-color: var(--background-color-alt-one);
-  color: black;
-  text-align: center;
+  color: var(--primary-color-dark);
 }
 
-.projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color-highlight);
 }
 
-.projects ul {
-  list-style: none;
-  padding: 0;
+.tableContainer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
-.projects li {
-  margin: 10px 0;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table thead {
+  background-color: #004080;
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table .cen {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
 }
