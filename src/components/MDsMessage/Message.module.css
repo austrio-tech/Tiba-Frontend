@@ -1,0 +1,24 @@
+.message {
+  padding: 1rem 2rem 4rem 2rem;
+  background-color: var(--background-color-alt-one);
+  color: #333;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  margin: 2rem;
+}
+
+.message h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color-highlight);
+}
+
+.message p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.right{
+    text-align: right !important;
+}

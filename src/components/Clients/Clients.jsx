@@ -17,14 +17,16 @@ import MDO from '../../assets/imgs/Clients/MOD.png';
 import PDO from '../../assets/imgs/Clients/PDO.png';
 import MOH1 from '../../assets/imgs/Clients/MOH.jpg';
 import MOAFW from '../../assets/imgs/Clients/MOAFW.png';
+import MODPF from '../../assets/imgs/Clients/MODPF.webp';
 
 
 const Clients = () => {
-  const logos = [MOH, MOE, ROP, ABQ, AGH, MOM, AJG, EDIC, MOTC, MM, ASI, MER, MDO, PDO, MOH1, MOAFW];
+  const logos = [MOH, MOE, ROP, ABQ, AGH, MOM, AJG, EDIC, MOTC, MM, ASI, MER, MDO, PDO, MOH1, MOAFW, MODPF];
 
   return (
     <section className={styles.clients}>
       <h2 className={styles.heading}>Our Clients</h2>
+          <p>*Our Expert Team has experience over diverse clients in Oman</p>
 
       <div className={styles.marquee}>
         <div className={`${styles.track} ${styles.leftToRight}`}>
@@ -36,12 +38,11 @@ const Clients = () => {
 
       <div className={styles.marquee}>
         <div className={`${styles.track} ${styles.rightToLeft}`}>
-          {[...logos, ...logos].map((logo, i) => (
+          {logos.slice().reverse().map((logo, i) => (
             <img key={`rtl-${i}`} src={logo} alt="Client Logo" className={styles.logo} />
           ))}
         </div>
       </div>
-      <p>*Our Expert Team has experience over diverse clients in Oman</p>
     </section>
   );
 };

@@ -13,9 +13,9 @@
 .h1 {
   position: relative;
   padding-top: 40vh;
-  color: #0072bb;
+  color: var(--primary-color);
   z-index: 2;
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 3px black;
 }
 
 .text {
@@ -34,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.6);
   pointer-events: none;
   z-index: 1; /* Must be below the text and navbar */
   transition: mask-image 0.1s ease, -webkit-mask-image 0.1s ease;

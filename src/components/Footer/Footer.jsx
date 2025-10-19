@@ -25,8 +25,7 @@ const Footer = () => {
         </p>
         <div className={styles.socials}>
           <p>
-            <strong>Follow Us:</strong>
-          </p>
+            <strong>Follow Us: </strong>
           <a
             href="https://linkedin.com"
             target="_blank"
@@ -34,13 +33,14 @@ const Footer = () => {
           >
             LinkedIn
           </a>
+          </p>
         </div>
       </div>
 
       <div className={styles.column}>
         <h3>Address</h3>
         <p>Floor 5, Door 504</p>
-        {/* <p>Complex 1532, Way 3519</p> */}
+        <p>Complex 1532, Way 3519</p>
         <p>Al Khuwair North</p>
         <p>Muscat, Oman</p>
         {/* <p>Postal Code: 123456</p> */}

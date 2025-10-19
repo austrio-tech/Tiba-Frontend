@@ -1,0 +1,13 @@
+@import url('../App.css');
+
+.bg1{
+    background-color: var(--background-color-alt-one);
+}
+
+.bg2{
+    background-color: var(--background-color-alt-two);
+}
+
+.pd1{
+    padding: 1rem;
+}

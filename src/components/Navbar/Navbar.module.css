@@ -2,13 +2,29 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 2rem;
   z-index: 1000;
-  background-color: transparent;
+  background-color: #ffffff !important;
+  /* color: white !important; */
+  /* text-shadow: 0 1.5px 2px white, 0 -1.5px 2px white, 1.5px 0 2px white, 1.5px 0 2px white; */
   transition: background-color 1s ease, box-shadow 0.3s ease;
 }
 
-.navbarScrolled {
+.navbar a {
+  color: black !important;
+  /* text-shadow: 0 1.5px 2px white, 0 -1.5px 2px white, 1.5px 0 2px white, 1.5px 0 2px white; */
+}
+/* 
+.navbar .navbardown {
+  background-color: #ffffff33 !important;
+} */
+
+/* .navbarScrolled {
+  background-image: linear-gradient(to bottom, #ffffff, #fffffff0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.navbarScrolled .navbardown{
   background-image: linear-gradient(to bottom, #ffffff, #fffffff0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: black;
@@ -16,7 +32,7 @@
 
 .navbarScrolled a {
   color: black !important;
-}
+} */
 
 .navbarContent {
   display: flex;
