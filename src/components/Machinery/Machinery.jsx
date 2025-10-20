@@ -24,9 +24,9 @@ import stellcutting from "../../assets/imgs/tools/steelcutting.jpg";
 import vibrator from "../../assets/imgs/tools/vib.avif";
 
 import mason from "../../assets/imgs/workers/mason.webp";
-import tileMason from "../../assets/imgs/workers/tileMason.jpg";
+import tileMason from "../../assets/imgs/workers/tilemason.jpg";
 import carpenter from "../../assets/imgs/workers/carpenter.jpg";
-import steelFixer from "../../assets/imgs/workers/steelFixer.jpg";
+import steelFixer from "../../assets/imgs/workers/steelfixer.jpg";
 import painter from "../../assets/imgs/workers/painter.webp";
 import plumber from "../../assets/imgs/workers/plumber.jpg";
 import operator from "../../assets/imgs/workers/operators.png";
