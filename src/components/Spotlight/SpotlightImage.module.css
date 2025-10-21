@@ -3,8 +3,8 @@
   width: 100%;
   height: 100vh;
   /* background-image: url("../../assets/imgs/projects/3.jpg"); */
-  background-image: url("../../assets/imgs/projects/bg1.jpeg");
-  /* background-image: url("../../assets/imgs/projects/bg2.jpeg"); */
+  /* background-image: url("../../assets/imgs/projects/bg1.jpeg"); */
+  background-image: url("../../assets/imgs/projects/bg3.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -13,9 +13,9 @@
 .h1 {
   position: relative;
   padding-top: 40vh;
-  color: var(--primary-color);
+  color: var(--pc);
   z-index: 2;
-  text-shadow: 0 0 3px black;
+  text-shadow:  0 1px 3px white, 0 -1px 3px black;
 }
 
 .text {
@@ -34,7 +34,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(60, 113, 52, 0.6);
+  /* background-color: rgba(52, 82, 113, 0.6); */
   pointer-events: none;
   z-index: 1; /* Must be below the text and navbar */
   transition: mask-image 0.1s ease, -webkit-mask-image 0.1s ease;

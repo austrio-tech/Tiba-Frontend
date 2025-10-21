@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./Footer.module.css";
 import logo from "../../assets/logo.svg";
 
+import { MdCall } from 'react-icons/md';
+import { FaWhatsapp } from 'react-icons/fa';
+
 const Footer = () => {
   return (
     <>
@@ -13,17 +16,27 @@ const Footer = () => {
           <p className={styles.cnameText}>TIBA Engineering & Contracting LLC</p>
         </div>
         <p>
-          <strong>Managing Director:</strong> +968 9919 2454 <br />
-          <strong>Operations Manager:</strong> +968 9800 7420 <br />
-          <strong>Project Manager:</strong> +968 7840 9311
+          <strong>Mohammed Tarek (Managing Director)</strong> <br /> <MdCall /> +968 9919 2454 <FaWhatsapp /> +968 9919 2454 <br />
+          <strong>Saravanan Sekar (Operations Manager)</strong> <br /> <MdCall /> +968 9114 6583 <FaWhatsapp /> +968 9800 7420 <br />
+          <strong>Hamanant Godase (Project Manager)</strong> <br /> <MdCall /> +968 7840 9311 <FaWhatsapp /> +968 9639 2826 <br />
         </p>
+        
+      </div>
+
+      <div className={styles.column}>
+        <h3>Address</h3>
+        <p>Floor 5, Door 504</p>
+        <p>Complex 1532, Way 3519</p>
+        <p>Al Khuwair North</p>
+        <p>Muscat, Oman</p>
+        {/* <p>Postal Code: 123456</p> */}
         <p>
           <strong>Email:</strong> mail@tibaoman.com
         </p>
         <p>
           <strong>Fax:</strong> +968 24489096
         </p>
-        <div className={styles.socials}>
+        {/* <div className={styles.socials}>
           <p>
             <strong>Follow Us: </strong>
           <a
@@ -34,16 +47,7 @@ const Footer = () => {
             LinkedIn
           </a>
           </p>
-        </div>
-      </div>
-
-      <div className={styles.column}>
-        <h3>Address</h3>
-        <p>Floor 5, Door 504</p>
-        <p>Complex 1532, Way 3519</p>
-        <p>Al Khuwair North</p>
-        <p>Muscat, Oman</p>
-        {/* <p>Postal Code: 123456</p> */}
+        </div> */}
       </div>
 
       <div className={styles.column}>
