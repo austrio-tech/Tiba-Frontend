@@ -3,7 +3,7 @@
   margin: 0 auto;
   background: var(--background-color-alt-one);
 
-  padding: 4rem 0;
+  padding: 3rem 0;
   /* padding: 0.8rem 1.2rem; */
   /* border-radius: 8px; */
   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
@@ -27,6 +27,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="url"],
 textarea {
   width: calc(100vw - 1.2rem * 8); /* we need to subtract twice the padding because it is applied to both sides */
   padding: 0.6rem;
@@ -36,6 +37,25 @@ textarea {
   margin-top: 0.3rem;
   font-size: 1rem;
   background-color: #ffffff;
+}
+
+input[type="file"]{
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
 textarea {

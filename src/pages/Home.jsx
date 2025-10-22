@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import SpotlightImage from "../components/Spotlight/SpotlightImage";
-import Carousel from "../components/Carousel/Carousel";
 import Overview from "../components/Overview/Overview";
 import Message from "../components/MDsMessage/Message";
 import Services from "../components/Services/Services";
@@ -18,8 +17,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <Carousel /> */}
-      <SpotlightImage />
+      <div id="home">
+        <SpotlightImage />
+      </div>
       <div id="overview">
         <Overview />
       </div>
@@ -37,13 +37,13 @@ const Home = () => {
         <Projects />
       </div>
       <div id="clients">
-      <Clients />
+        <Clients />
       </div>
       <div id="contact">
         <ContactForm />
       </div>
       <div id="about">
-      <Footer />
+        <Footer />
       </div>
     </>
   );

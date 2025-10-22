@@ -83,6 +83,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../../assets/logo.svg";
 import downloadProfile from "../../pages/DownloadProfile";
 import styles from "./Navbar.module.css"; // Optional custom styles
+import { useLocation } from 'react-router-dom'
 
 const CustomNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -97,6 +98,18 @@ const CustomNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [location])
+
+
   return (
     <Navbar
       expand="lg"
@@ -107,7 +120,7 @@ const CustomNavbar = () => {
     >
       <Container>
         {/* Logo */}
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
+        <Navbar.Brand href="/#home" className="d-flex align-items-center">
           <img
             src={logo}
             alt="Logo"
@@ -123,50 +136,45 @@ const CustomNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth", // for smooth scrolling
-                });
-              }} href="#"
+              href="/#home"
             >
               Home
             </Nav.Link>
             <NavDropdown title="Overview" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#overview" className={styles.navbardown}>
+              <NavDropdown.Item href="/#overview" className={styles.navbardown}>
                 Overview
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#message"
+                href="/#message"
                 className={styles.navbardown}
               >
                 MD's Message
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#vision"
+                href="/#vision"
                 className={styles.navbardown}
               >
                 Vision & Mission
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#coreValues"
+                href="/#coreValues"
                 className={styles.navbardown}
               >
                 Core Values
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="About Us" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#services" className={styles.navbardown}>
+              <NavDropdown.Item href="/#services" className={styles.navbardown}>
                 Services
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#projects"
+                href="/#projects"
                 className={styles.navbardown}
               >
                 Projects
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#clients"
+                href="/#clients"
                 className={styles.navbardown}
               >
                 Clients
@@ -178,8 +186,9 @@ const CustomNavbar = () => {
                 About Us
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link href="#">Careers</Nav.Link>
+            <Nav.Link href="/#contact">Contact</Nav.Link>
+            <Nav.Link href="/gallery">Gallery</Nav.Link>
+            <Nav.Link href="/careers">Careers</Nav.Link>
             <Nav.Link
               href="/profile"
               onClick={(e) => {
