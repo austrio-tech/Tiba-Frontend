@@ -1,6 +1,6 @@
 #root {
   /* max-width: 1280px; */
-  max-width: 100vw;
+  width: 100vw;
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
@@ -8,7 +8,7 @@
   --primary-color-light: #4d94c0;
   --primary-color: #0072bb;
   --primary-color-dark: #003454;
-  --pc: #008de4;
+  --pc: #50e63c;
   --primary-color-highlight: rgb(255, 231, 94);
   --secondary-color: #ccb20b;
   --text-color: #333;

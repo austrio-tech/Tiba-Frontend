@@ -15,7 +15,7 @@
   padding-top: 40vh;
   color: var(--pc);
   z-index: 2;
-  text-shadow:  0 1px 3px white, 0 -1px 3px black;
+  text-shadow:  0 1px 3px #959505, 0 -1px 3px black;
 }
 
 .text {
@@ -23,7 +23,7 @@
   z-index: 2;
   color: white;
   font-size: 1.5rem;
-  text-shadow: 0 0 3px black;
+  text-shadow:  0 1px 3px #051195, 0 -1px 3px black;
   text-align: center;
   /* padding-top: 40vh; */
 }
@@ -34,8 +34,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(60, 113, 52, 0.6);
-  /* background-color: rgba(52, 82, 113, 0.6); */
+  /* background-color: rgba(60, 113, 52, 0.6); */
+  background-color: rgba(52, 82, 113, 0.6);
   pointer-events: none;
   z-index: 1; /* Must be below the text and navbar */
   transition: mask-image 0.1s ease, -webkit-mask-image 0.1s ease;
