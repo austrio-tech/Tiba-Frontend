@@ -29,12 +29,19 @@ const Footer = () => {
         <p>Complex 1532, Way 3519</p>
         <p>Al Khuwair North</p>
         <p>Muscat, Oman</p>
+        <p>PO: 533, PC: 130</p>
         {/* <p>Postal Code: 123456</p> */}
         <p>
           <strong>Email:</strong> mail@tibaoman.com
         </p>
         <p>
+          <strong>Phone:</strong> +968 24487072
+        </p>
+        <p>
           <strong>Fax:</strong> +968 24489096
+        </p>
+        <p>
+          <strong>Website:</strong> <a href="https://www.tibaeng.com" target="_blank" rel="noopener noreferrer">www.tibaeng.com</a>
         </p>
         {/* <div className={styles.socials}>
           <p>
