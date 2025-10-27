@@ -10,7 +10,6 @@ const Footer = () => {
     <>
     <footer className={styles.footer}>
       <div className={styles.column}>
-        {/* <h3>Contact Us</h3> */}
         <div className={styles.cname}>
           <img src={logo} className={styles.footerLogo} alt="My Company Logo" />
           <p className={styles.cnameText}>TIBA Engineering & Contracting LLC</p>
@@ -30,7 +29,6 @@ const Footer = () => {
         <p>Al Khuwair North</p>
         <p>Muscat, Oman</p>
         <p>PO: 533, PC: 130</p>
-        {/* <p>Postal Code: 123456</p> */}
         <p>
           <strong>Email:</strong> mail@tibaoman.com
         </p>
@@ -58,7 +56,6 @@ const Footer = () => {
       </div>
 
       <div className={styles.column}>
-        {/* <h3>Find Us</h3> */}
         <div className={styles.mapContainer}>
           <iframe
             title="Company Location"
