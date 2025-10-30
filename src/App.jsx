@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import DownloadProfile from './pages/DownloadProfile';
-import Careers from './pages/CareersPage';
-import Gallery from './pages/GalleryPage';
+import Careers from './pages/careers';
+import Gallery from './pages/gallery';
 
 const App = () => {
   return (
