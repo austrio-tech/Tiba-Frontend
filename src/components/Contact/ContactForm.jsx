@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
+import { API_ENDPOINTS } from "../../config/api";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    subject: "",
     message: "",
     subscribe: false,
   });
@@ -21,22 +23,26 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Create plain text message from formData
-    const plainTextMessage = `
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Message: ${formData.message}
-Subscribed to newsletter: ${formData.subscribe ? "Yes" : "No"}
-  `.trim();
+    // Create JSON message from formData
+    const jsonMessage = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+      subscribe: formData.subscribe,
+      from: "mao",
+      to: "TEST_SEND",
+      sourcetype: "contact-website",
+    };
 
     try {
-      const response = await fetch("https://myweb.com/sendmail", {
+      const response = await fetch(API_ENDPOINTS.SEND_CONTACT, {
         method: "POST",
         headers: {
-          "Content-Type": "text/plain",
+          "Content-Type": "application/json",
         },
-        body: plainTextMessage,
+        body: JSON.stringify(jsonMessage),
       });
 
       if (!response.ok) {
@@ -51,12 +57,13 @@ Subscribed to newsletter: ${formData.subscribe ? "Yes" : "No"}
         name: "",
         email: "",
         phone: "",
+        subject: "",
         message: "",
         subscribe: false,
       });
     } catch (error) {
       console.error("Failed to send message:", error);
-      alert("Oops! Something went wrong while sending your message.");
+      alert("Something went wrong while submitting your application.\n\nYou can submit your application by sending an email to mail@tibaoman.com"); 
     }
   };
 
@@ -96,6 +103,18 @@ Subscribed to newsletter: ${formData.subscribe ? "Yes" : "No"}
           value={formData.phone}
           onChange={handleChange}
           placeholder="Phone Number"
+        />
+      </label>
+
+      <label>
+        Subject: <br />
+        <input
+          type="text"
+          name="subject"
+          required
+          value={formData.subject}
+          onChange={handleChange}
+          placeholder="Subject"
         />
       </label>
 

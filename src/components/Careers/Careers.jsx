@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Careers.module.css"; // Reuse existing styles
+import { API_ENDPOINTS } from "../../config/api";
 
 const CareersForm = () => {
   const [formData, setFormData] = useState({
@@ -36,10 +37,13 @@ const CareersForm = () => {
     formPayload.append("linkedin", formData.linkedin);
     formPayload.append("message", formData.message);
     formPayload.append("relocate", formData.relocate ? "Yes" : "No");
-    formPayload.append("resume", formData.resume);
+    formPayload.append("document", formData.resume); 
+    formPayload.append("from", "mao");
+    formPayload.append("to", "TEST_SEND");
+    formPayload.append("sourcetype", "career-website");
 
     try {
-      const response = await fetch("https://myweb.com/apply", {
+      const response = await fetch(API_ENDPOINTS.SEND_CAREERS, {
         method: "POST",
         body: formPayload,
       });
