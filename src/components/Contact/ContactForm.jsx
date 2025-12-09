@@ -31,8 +31,8 @@ const ContactForm = () => {
       subject: formData.subject,
       message: formData.message,
       subscribe: formData.subscribe,
-      from: "mao",
-      to: "TEST_SEND",
+      from: "tiba",
+      to: "admin",
       sourcetype: "contact-website",
     };
 

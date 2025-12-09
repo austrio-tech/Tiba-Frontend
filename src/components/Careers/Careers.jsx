@@ -38,8 +38,8 @@ const CareersForm = () => {
     formPayload.append("message", formData.message);
     formPayload.append("relocate", formData.relocate ? "Yes" : "No");
     formPayload.append("document", formData.resume); 
-    formPayload.append("from", "mao");
-    formPayload.append("to", "TEST_SEND");
+    formPayload.append("from", "tiba");
+    formPayload.append("to", "admin");
     formPayload.append("sourcetype", "career-website");
 
     try {
